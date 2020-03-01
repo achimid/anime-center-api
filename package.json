@@ -1,0 +1,28 @@
+{
+  "name": "anime-center-api",
+  "version": "1.0.0",
+  "description": "API centralizadora de lançamento de animes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achimid/anime-center-api.git"
+  },
+  "author": "achimid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/achimid/anime-center-api/issues"
+  },
+  "homepage": "https://github.com/achimid/anime-center-api#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-status-monitor": "^1.2.8",
+    "http-status-codes": "^1.4.0",
+    "mongoose": "^5.9.2",
+    "socket.io": "^2.3.0"
+  }
+}
