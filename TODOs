@@ -1,0 +1,60 @@
+
+
+01)
+Criar um endpoint para cadastro das notificações de animes
+    - Seguir o exemplo do arquivo healthcheck-controller.js
+    - Olhar o projeto web-page-notify-api para mais auxilio
+    - Endpoint do tipo POST que receberá as notificações do sistema de notificação
+        - Criar um model para conseguir persistir na base de dados
+        - Criar um controller para expor os endpoints e rotas.
+    - Acho que o nome pode ser Catalogo -> Catalog
+    - O model deve armazenar apenas as informações necessários sobre o anime e o site
+        - A maioria das informações virá dentro de 'extractedContent', será necessário pegar as informações baseados nas posições do array
+            - Salvar (url do site, nome do site, url do animes, nome do anime, numero do episodio, formatos disponiveis, data atual do salvamento)
+    - Você deve salvar somente lancamentos unicos, ou seja, não seve salvar animes iguais de nome, episodio e site.
+
+
+
+
+02)
+Criar um endpoint para listar os ultimos lançamentos
+
+
+
+Exemplo de dados JSON esperados:
+
+{
+    url: "https://www.google.com",
+    name: "Google",
+    scriptTarget: "document.documentElement.outerHTML",
+    scriptContent: ["document.documentElement.outerHTML"],
+    options: {
+        hitTime: 5,
+        onlyChanged: true,
+        onlyUnique: true,
+        useJquery: false,
+        waitTime: false,
+        isDependency: false
+    },
+    notification: [{
+        "telegram": {
+            "bot_token:": "1038340863:AAFmixa_WtcjlEbcGNAPvD-ArUBA7Kr-xUE",
+            "chat_id": [123456789]
+        },
+        "template": "<a href=\"{url}">AnimesTeleCine<\/a> {0} "		
+    }],
+    lastExecution: {
+        isSuccess: true
+        createdAt: "2020-03-01T20:15:04.339+00:00"
+        hashTarget: "ed15d2c73e9066a156cf89b69a4ff2b7"
+        extractedTarget: "Eizouken ni wa Te wo Dasu na! - Episódio 09"
+        extractedContent: [
+            "Eizouken ni wa Te wo Dasu na!",
+            "Episódio 09",
+            "https://www.animestc.com/animes/ishuzoku-reviewers/",            
+            "[MP4, 720p, 1080p]",
+        ]
+        hashChanged: false
+    }
+        
+}
