@@ -7,6 +7,7 @@ Criar um endpoint para cadastro das notificações de animes
     - Endpoint do tipo POST que receberá as notificações do sistema de notificação
         - Criar um model para conseguir persistir na base de dados
         - Criar um controller para expor os endpoints e rotas.
+        - Criar um arquivo de service para centralizar as operações
     - Acho que o nome pode ser Catalogo -> Catalog
     - O model deve armazenar apenas as informações necessários sobre o anime e o site
         - A maioria das informações virá dentro de 'extractedContent', será necessário pegar as informações baseados nas posições do array
@@ -18,7 +19,21 @@ Criar um endpoint para cadastro das notificações de animes
 
 02)
 Criar um endpoint para listar os ultimos lançamentos
+    - O endpoint deve listar os ultimos lançamentos dos animes
+    - Deve ser um endpoint do tipo GET
+    - O retorno deve estar agrupado, deve ser possivel agrupar por titulo de animes ou por sites de horigem.
+    - Buscar na base de dados utilizando o Mongoose e os filtros (Model.find({ url: 'www...'}))
+    - Listar apenas os ultimos 50 lançamentos (acho que é o suficiente)
+        - Utilizar o mesmo arquivo de Model já criado anteriormente
+        - Utilizar o mesmo arquivo de controller e service já existente
+    - Receber os parametros de pesquisa e agrupamento por meio de queryString (/animes?agrupar=1)
 
+
+03)
+Criar sistema de usuario e account
+
+04)
+Criar funcionalidade de notificação de lançamentos baseado no cadastro do usuario
 
 
 Exemplo de dados JSON esperados:
