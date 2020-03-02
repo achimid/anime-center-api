@@ -29,6 +29,8 @@ Criar um endpoint para listar os ultimos lançamentos
     - Receber os parametros de pesquisa e agrupamento por meio de queryString (/animes?agrupar=1)
 
 
+Criar arquivo de READ.ME
+
 03)
 Criar sistema de usuario e account
 
