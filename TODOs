@@ -12,7 +12,7 @@ Criar um endpoint para cadastro das notificações de animes
     - O model deve armazenar apenas as informações necessários sobre o anime e o site
         - A maioria das informações virá dentro de 'extractedContent', será necessário pegar as informações baseados nas posições do array
             - Salvar (url do site, nome do site, url do animes, nome do anime, numero do episodio, formatos disponiveis, data atual do salvamento)
-    - Você deve salvar somente lancamentos unicos, ou seja, não seve salvar animes iguais de nome, episodio e site.
+    - Você deve salvar somente lancamentos unicos, ou seja, não deve salvar animes iguais de nome, episodio e site.
 
 
 

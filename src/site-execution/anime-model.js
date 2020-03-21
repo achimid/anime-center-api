@@ -1,6 +1,6 @@
 const mongoose = require("mongoose")
 
-const schema = mongoose.Schema({
+const schema =  mongoose.Schema({
     url: {
         type: String,
         required: true
@@ -14,25 +14,25 @@ const schema = mongoose.Schema({
     },
     nomeAnime: {
         type: String,
-        required: true
+        required: false
     },
     numeroEpisodio: {
         type: Number,
-        required: true
+        required: false
     },
     formato: {
         type: String,
-        required: true
+        required: false
     },
     dataAtual: {
         type: Date,
-        required: true
+        required: false
     }
 
     
 })
 
-const Anime = mongoose.model('Anime' , schema);
+const animeModel = mongoose.model('anime' , schema)  
 
-module.exports = Anime
+module.exports = animeModel
 

@@ -1,12 +1,15 @@
-const express = require("express")
+const animeModel = require("./anime-model")
 
 
 
-const salvaInformacao = (anime) => {
-    
+const salvar =  (anime) => {
+    informacao = new animeModel(anime)
+    return informacao.save()
 }
 
+const buscaAnime = () => animeModel.find()
 
 module.exports = {
-    salvaInformacao
+    salvar,
+    buscaAnime
 }

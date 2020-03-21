@@ -20,7 +20,7 @@ app.use(express.json())
 
 
 routes(app)
-// statup()
+statup()
 
 
 server.listen(process.env.PORT)
