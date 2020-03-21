@@ -21,9 +21,18 @@ const schema = mongoose.Schema({
         required: true
     },
     formato: {
-        type: String
+        type: String,
+        required: true
     },
     dataAtual: {
-        type: Date
+        type: Date,
+        required: true
     }
+
+    
 })
+
+const Anime = mongoose.model('Anime' , schema);
+
+module.exports = Anime
+
