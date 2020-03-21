@@ -2,13 +2,13 @@ const express = require("express")
 const router = express.Router()
 const service = require('./anime-service')
 
-const executeRequest = (req, res) => {
-
-    anime-service.salvaInformacao('dados')
+const executeRequest = (dadoAnime, res) => {
+    service.salvaInformacao('dados')
+    res.json()
 }
 
 
-router.post('/',  async (req, res) => executeRequest(req.body, res))
+router.post('/salvar',  (req, res) => executeRequest(req.body, res))
 
 
 module.exports = router
