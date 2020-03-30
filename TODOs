@@ -37,6 +37,14 @@ Criar sistema de usuario e account
 04)
 Criar funcionalidade de notificação de lançamentos baseado no cadastro do usuario
 
+05)
+Receber uma requisição da notificação da aplicação IWannaBeNotified
+     e passar para o projeto do mkv-extractedContent. Quando o mkv extract responder,
+      salvar a lagenda.
+
+API1 => Center => MKV-Extract
+        Center <= MKV-Extract
+        Center => Salva no Banco
 
 Exemplo de dados JSON esperados:
 
