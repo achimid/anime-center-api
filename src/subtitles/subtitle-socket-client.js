@@ -1,5 +1,5 @@
-const fetch = require('node-fetch')
-const socket = require('socket.io-client')(process.env.MKV_EXTRACT_API, { transports: ['websocket'] })
+const server_url = process.env.KEEP_UP != 'false' ? process.env.MKV_EXTRACT_API : ''
+const socket = require('socket.io-client')(server_url, { transports: ['websocket'] })
 
 socket.on('reconnect_attempt', () => { socket.io.opts.transports = ['polling', 'websocket']})
 
